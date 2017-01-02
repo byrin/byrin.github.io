@@ -13,4 +13,8 @@
 
 [PC相关]()
 
+  * # [Windows]
   * [Windows](PC_About/Windows/index.md)
+  - - - -
+  * # [Linux]
+  * [Linux](PC_About/Linux/index.md)
