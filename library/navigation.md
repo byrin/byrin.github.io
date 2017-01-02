@@ -1,8 +1,6 @@
 # My Wiki
 
 [嵌入式]()
-
-  * [MCU](Technology/index.md)
   - - - -
   * # [MCU]
   * [STM32](Embeded/MCU/STM32/index.md)
