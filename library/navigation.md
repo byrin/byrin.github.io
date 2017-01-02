@@ -1,6 +1,6 @@
 # My Wiki
 
-[Technology]()
+[嵌入式]()
 
   * [Index...](Technology/index.md)
   - - - -
@@ -11,8 +11,9 @@
   * # [Network]
   * [Index...](Technology/Network/index.md)
 
-[Travel]()
+[上位机]()
 
   * [Index...](Travel/index.md)
 
-[Blog](https://zohead.com/)
+[PC相关]()
+  * [index...](Travel/index.md)
