@@ -1,37 +1,60 @@
-## Welcome to Byrin Wiki 
+---
+title: Wikitten and MDwiki merged Markdown Wiki system
+author: Uranus Zhou
+---
 
-You can use the [editor on GitHub](https://github.com/byrin/byrin.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Wikitten and MDwiki merged Markdown Wiki system
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Introduction
 
-### Markdown
+This Wikitten and MDwiki merged Wiki system is based on PHP Wiki [Wikitten](http://wikitten.vizuina.com/) and pure static JavaScript Wiki [MDwiki](http://www.mdwiki.info/).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You can deploy this merged Wiki system on your PHP web server (via Wikitten) or static web server, also you can view your Wiki locally (via MDwiki).
 
-```markdown
-Syntax highlighted code block
+I made some modifications to MDwiki and Wikitten, so they can share the same Wiki document directory and show similar Wiki interface.
 
-# Header 1
-## Header 2
-### Header 3
+### Changes to MDwiki
 
-- Bulleted
-- List
+* Put all Markdown document to a new `library` directory, which is the same to Wikitten;
+* Support [YAML front matter](http://jekyllrb.com/docs/frontmatter/) at the beginning of Markdown file;
+ 
+ > **Note**
+ > 
+ > YAML front matter support is already in MDwiki develop version, it should comes to final user in further release.
+ > YAML front matter in Markdown document should begin and end with three back-ticks (`` ` ``) instead of three dashes (-).
+ 
+* I write an auto generate index files script **`generate-index.sh`** for MDwiki `library` directory, run this in Bash shell:
+ 
+ ```bash
+ ./generate-index.sh library
+ ```
 
-1. Numbered
-2. List
+ Then **`generate-index.sh`** will generate `index.md` for all sub-directories (only if one directory doesn't contain valid `index.md` document).
 
-**Bold** and _Italic_ and `Code` text
+ Once you add new Markdown document or delete/rename document in `library` directory, you should run this **`generate-index.sh`** to generate new index files.
 
-[Link](url) and ![Image](src)
-```
+### Changes to Wikitten
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+* Support YAML front matter which begin and end with both three back-ticks (`` ` ``) and three dashes (-);
+* Show `index.md` document if switch to on directory (instead of tell user to select in Wiki library tree);
+* Set Markdown table width to 100%.
 
-### Jekyll Themes
+## Deploy
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/byrin/byrin.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Note: Wikitten and MDwiki share the same `library` Markdown document directory.
 
-### Support or Contact
+### Deploy Wikitten
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Please refer to [Wikitten](http://wikitten.vizuina.com/) website, you need at least PHP 5.3 and php_fileinfo module, and your web server should support rewrite.
+
+Wikitten config file is `config.php` in root directory.
+
+### Deploy MDwiki
+
+Please refer to [MDwiki](http://www.mdwiki.info/) website.
+
+MDwiki config file is `config.json` in root directory, I add a new `parseHeader` config in `config.json` file (this is already in MDwiki develop version).
+
+## Contact
+
+Any problems? Feel free to add new issue or contact me at [https://zohead.com/](https://zohead.com/).
