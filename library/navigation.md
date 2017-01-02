@@ -2,19 +2,17 @@
 
 [嵌入式]()
 
-  * [Index...](Technology/index.md)
+  * [MCU](Technology/index.md)
   - - - -
-  * # [Linux]
-  * [Index...](Technology/Linux/index.md)
-  * [Debug](Technology/Linux/Debug/index.md)
+  * # [MCU]
+  * [STM32](Embeded/MCU/STM32/index.md)
   - - - -
-  * # [Network]
-  * [Index...](Technology/Network/index.md)
+  * # [Linux] 
 
 [上位机]()
 
-  * [Index...](Travel/index.md)
+  * [Qt](PC_Program/Qt/index.md)
 
 [PC相关]()
 
-  * [index...](Travel/index.md)
+  * [index...](PC_About/Windows/index.md)
