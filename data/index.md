@@ -2,10 +2,10 @@
 
 ***
 ### 嵌入式技术 ###
-* [编程相关]()
+* [编程相关](Embedded:Program:pindex)
     * [STM32 相关]() 
     * [Qt 相关]()
-* [技术文章]()
+* [技术文章](Embedded:Article:aindex)
 
 ### 电脑技术 ###
 * [软件相关]()
